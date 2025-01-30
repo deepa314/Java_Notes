@@ -1,0 +1,9 @@
+Multi threading
+  Process is the instance of program getting executed
+  Every process has their own allocated resources like heap memory and independent of each other
+  And these process can run parallely
+
+What is thread???
+One process can have multiple thread
+The smallest set of instruction executed by cpu sequesntially
+It convert byte code into 
