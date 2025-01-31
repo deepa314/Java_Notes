@@ -171,3 +171,53 @@ hashtag#JAVA hashtag#DEVELOPER hashtag#INTERVIEW hashtag#PREPARATION DM ME
 20.  How can you call a static method in another class?
 21.  Can a static variable be overridden by a subclass? Why or why not?
 
+
+
+
+Any Java Developer Should Prepare These Microservices Interview Questions
+hashtag#microservices hashtag#java hashtag#developer hashtag#interview hashtag#preparation hashtag#DM me
+1. Can you explain what Microservices are and how they differ from Monolithic architecture?
+2. Why did your project choose a Microservices architecture?
+3. Explain about microservices architecture?
+4. In the current project, how did you implement Microservices using Spring Boot?
+5. How did you ensure that each Microservice handled its specific functionality?
+6. How did Microservices in your project communicate with each other?
+7. Can you provide a real-time example from your project where inter-service communication was critical?
+8. How did you manage databases in your Microservices architecture?
+9. Did each service have its own database, or did you use a shared database? Why?
+10. Explain how you handled database transactions that spanned multiple Microservices.
+
+11. One of your Microservices is calling another service, but the downstream service is occasionally slow or failing. How to implement a circuit breaker to handle this?
+
+12. Provide a real-world example of when this pattern was useful in your projects.
+13. Imagine your Microservices are exposed to external clients. How did you handle routing, security, and aggregation?
+14. Did you use an API Gateway (e.g., Zuul, Kong, or Spring Cloud Gateway)? If so, how did you implement it?
+15. How did you ensure secure communication between Microservices? Did you use OAuth2, JWT, or any other method?
+16. Provide an example where implementing security across Microservices was a challenge, and how you resolved it.
+17. Suppose you have a payment Microservice and an order Microservice. A user places an order, and the payment fails. How can you ensure consistency between the services?
+18. Did you use Sagas, 2-phase commit, or another pattern for distributed transactions?
+19. What did you do when one Microservice had high latency, which impacted the overall application performance?
+20. In a Microservices architecture, multiple teams often work on different services. How did you manage dependencies and coordinate deployments?
+
+
+
+
+Recently asked Java Developer Interview Questions
+hashtag#java hashtag#developer hashtag#interview hashtag#preparation
+1.     How to use Lambda expressions and Stream API in Java? 
+Follow up:
+Can you write a simple example where you filter a list of numbers and find the sum of even numbers using Java Streams?
+2.     What is the difference between synchronized and volatile in Java? Can you give an example of when each would be used?
+3.     Can you explain how Spring Boot's auto-configuration mechanism works? How does it help developers to quickly set up an application?
+4.     Can you explain the concept of Dependency Injection (DI) in Spring? How have you used DI in your Spring Boot applications? Can you give an example of constructor-based DI and setter-based DI?
+5.     How can you expose RESTful services in Spring Boot? Can you walk me through creating a simple REST API with a GET and POST method?
+6.     How to secure a Spring Boot application? Can you explain how you would use Spring Security for user authentication and authorization? Can you describe an example where you configured role-based access control?
+7.     How to deploy a Spring Boot application to an AWS EC2 instance? 
+8.     Can you explain how AWS S3 works? How to  use it in a Spring Boot application to store and retrieve files?
+9.     Can you explain how Maven manages the build lifecycle of a project? What are the main phases of the Maven lifecycle, and how have you used them in your projects?
+10.  How does Maven handle project dependencies? Can you explain how you manage version conflicts with Maven?
+11.  What are Maven profiles and plugins? How do you use them to customize builds for different environments or purposes?
+12.  How to write unit tests in Java using JUnit? Can you provide an example of a simple unit test for a Spring Boot service method?
+13.  What is Mockito used for, and how would you use it to mock a service in a Spring Boot application? Can you show an example where you mock an external service call in a unit test?
+14.  Can you explain Test-Driven Development (TDD)? How have you applied TDD in your Spring Boot projects, and what challenges did you face while writing tests before the implementation?
+
