@@ -1,0 +1,173 @@
+Java Questions asked commonly
+
+Java Developer Interview Questions for Experienced
+hashtag#realtime hashtag#java hashtag#scenario hashtag#interview hashtag#questions
+1.     You need to prevent API abuse by implementing a rate limiter in Spring Boot.
+·       How would you implement it?
+·       Which algorithms would you use? (Token Bucket vs. Leaky Bucket)
+·        How can Redis help in rate limiting?
+2.     Your system expects 1M+ requests per second during peak load.
+·       How do you scale your system?
+·       What caching mechanisms would you implement?
+·       How do you handle sudden traffic spikes?
+
+3.     Users are uploading large files (1GB+), and the service is slowing down.
+
+·       What’s the best way to handle file uploads efficiently?
+·       Would you use S3, MinIO, or another storage solution?
+·       How to implement a resumable upload?
+
+4.     Identify and fix the memory leak in the following code:
+class MemoryLeakExample {
+ private static List<String> cache = new ArrayList<>();
+
+ public void addData() {
+ for (int i = 0; i < 1000000; i++) {
+ cache.add("Data-" + i);
+ }
+ }
+}
+·       What is wrong with this code?
+·       How do you fix the memory leak?
+
+5.     The following code is not thread-safe. Why?
+
+class Counter {
+ private int count = 0;
+
+ public void increment() {
+ count++;
+ }
+}
+·       What’s wrong with this implementation?
+·       How would you make it thread-safe?
+
+6.     Your REST API is slow. Fix this code:
+
+@GetMapping("/users")
+public List<User> getAllUsers() {
+ return userRepository.findAll();
+}
+·       Why is this method slow for large datasets?
+·       How can you optimize it using pagination?
+
+Java 11/17 real time interview Questions
+
+1.     Have you used any features introduced by JEPs in Java 11 or 17, such as JEP 356 (Enhanced Pseudo-Random Number Generators) or JEP 360 (Sealed Classes)?
+2.     Can you explain a scenario where sealed classes were beneficial in enforcing stricter type hierarchies in your project?
+3.     How have you utilized the enhancements in Stream API in Java 11 (e.g., takeWhile, dropWhile, ofNullable) in your codebase to improve performance or readability?
+4.     In your current project, how did Java 11/17 features like Records or Stream API enhancements contribute to simplifying data transformations or DTO handling in your microservices?
+5.     Your project for Ericsson involved handling high-volume asynchronous communication with RabbitMQ. How did you leverage Java’s CompletableFuture or java.util.concurrent enhancements to optimize thread management?
+6.     Java 17 introduced new Garbage Collection algorithms. Have you explored G1 GC or ZGC in your application?
+
+7.     Write a Java program to process a list of employees (with fields like name, department, salary). Perform the following using Stream API:
+Ø Filter employees whose salary is greater than $50,000.
+Ø Group them by department and calculate the average salary for each department.
+Ø Sort the result by department name.
+
+8.     Implement a Shape hierarchy using sealed classes in Java 17.
+Ø Define Shape as the sealed class with permitted subclasses Circle and Rectangle.
+Ø Use Records to define immutable data classes for Circle (with radius) and Rectangle (with length and width).
+Ø Write a method that calculates the area of each shape using pattern matching for switch.
+
+9.     You are given the following code snippet that is failing in production:
+List<String> items = Arrays.asList("A", "B", "C");
+items.stream()
+ .map(String::toLowerCase)
+ .filter(s -> s.startsWith("a"))
+ .forEach(System.out::println);
+Ø Problem: The code does not produce any output.
+Ø Identify the issue and provide a fix.
+Ø Enhance the code to handle a scenario where items can be null.
+
+
+Most asked Java 11 and 17 interview questions
+hashtag#java11 hashtag#java17 hashtag#interview hashtag#questions
+1.     Can you explain the significance of the var keyword, and how it works in Java 11?
+2.     Can you explain the usage of isBlank() and how it differs from isEmpty()?
+3.     Java 11 added the List.of() method. Can you explain its use and provide an example where it can be helpful over traditional methods of list creation?
+4.     How does the module system in Java 11 work, and what are the benefits of using modules in an application? Can you briefly explain module-info.java?
+5.     Can you explain how the new HttpClient in Java 11 is different from the previous HttpURLConnection? Could you give an example of sending a simple GET request using the new HttpClient API?
+6.     What are Sealed Classes, and how do they differ from normal classes? Can you give an example of how you might use Sealed Classes to restrict inheritance?
+7.     Can you explain what this feature does and how it simplifies the code? For example, how would you use it instead of the traditional instanceof check?
+8.     Can you explain how you would use Optional to handle null safely in Java 11 or 17?
+9.     Can you explain what a record is in Java and how it is different from a regular class?
+10.  Java 11 introduced enhancements in the File API. One such method is Files.readString() and Files.writeString(). Can you explain how these methods can be used for reading and writing files as strings?
+11.  What is the role of Garbage Collection in Java, and what improvements were introduced in Java 11 and 17? Can you explain the differences between G1 and ZGC (Z Garbage Collector)?
+12.  How to Use Optional for Null Safety in Service Layer?
+13.  How to implement a Simple Sealed Class Structure for Vehicle Types
+14.  How to use Refactor Service Layer with Pattern Matching for instanceof` (Java 17)
+
+
+
+Scenario Based Java Developer Interview Questions
+hashtag#java hashtag#scenario hashtag#interview hashtag#questions
+1.     If you were asked to sort 1 million records by a custom order, how to approach it? What to consider when choosing a data structure?
+
+2.     In one of your projects, you’ve been asked to optimize memory usage. Let’s say you have a list of records, but duplicates aren’t allowed. Would you prefer Set or List? Why?
+3.     Say you’re building a text-processing tool where strings undergo multiple transformations like trimming, replacing, and concatenating. Which class would you choose between String, StringBuilder, or StringBuffer? Why?
+4.     You need to write a program where multiple threads process records from a shared queue, but you must ensure no record is processed twice. What Java constructs or libraries would you use?
+
+5.     Let’s say you have a utility class with methods like calculateTax() and formatDate().
+Ø Would you make these methods static? Why or why not?
+Ø What if one of these methods needs to maintain a global counter? How would you design it?
+
+6.     Imagine you’re tasked with creating a search engine feature that processes millions of text entries to find keywords.
+Ø How to handle string manipulation to ensure efficiency?
+Ø Is it always a good idea to use StringBuilder over String? Why?
+
+7.     You’re designing a system to track user sessions for a web application. Sessions are unique, need to be frequently accessed, and expire after a certain time.
+Ø Which collection would you use, and why?
+Ø How to handle concurrent access to this collection?
+
+8.     You have a multi-threaded application that processes orders. Each thread must ensure it does not pick the same order twice.
+Ø How to design the solution to prevent duplicate processing?
+Ø Can volatile help here? Why or why not?
+
+9.     Imagine your application is facing frequent OutOfMemoryError issues during peak loads.
+
+Ø How can you troubleshoot and optimize the JVM heap memory?
+Ø What is the difference between the heap and the stack in JVM memory management?
+Ø What is the purpose of the GC Root in Java?
+
+10.  You’re working on a trading platform where orders need to be processed in the order they arrive. Duplicate orders should be ignored.
+
+Ø Which collection(s) would you use, and why?
+Ø How does a PriorityQueue differ from a LinkedList in terms of performance?
+
+11.  You need to filter a list of employee objects to find all employees with a salary above 50,000.
+Ø How to achieve this using Java Streams?
+Ø What is the difference between map() and flatMap() in Streams?
+
+12.  Can immutable classes still have mutable fields? Why or why not?
+
+13.  Imagine you’re building an application with different user roles (ADMIN, USER, GUEST). How would you use Enums effectively here?
+14.  Can Enums have constructors and methods? Provide an example.
+
+
+
+
+Most asked Java interview Questions [CORE JAVA]
+hashtag#JAVA hashtag#DEVELOPER hashtag#INTERVIEW hashtag#PREPARATION DM ME
+1.     Can an interface have a constructor? Why or why not?
+2.     What is the significance of the default keyword in Java 8 interfaces?
+3.     Can a class implement multiple interfaces in Java? If yes, explain how.
+4.     Can an interface extend another interface? If so, what is the use case?
+5.     What happens if a class implements two interfaces with conflicting default methods?
+6.     Can you explain the difference between public, private, protected, and package-private access modifiers?
+7.     What is the purpose of the protected access modifier? Can you access a protected method from another package?
+8.     What is the default access level for a class, method, or variable if no access modifier is specified?
+9.     Can you access a private variable from a subclass?
+10.  What is a functional interface? Can you give an example?
+11.  Explain the concept of Lambda Expressions in Java 8. How do they improve code readability?
+12.  What is the Stream API in Java 8, and how is it different from a collection?
+13.  What is the difference between map() and flatMap() in Java 8 Streams?
+14.  How to use the Optional class in Java 8 to avoid NullPointerException?
+15.  What are the major improvements introduced in java.time package in Java 8?
+16.  Can you create an instance of a class with only static methods? How to call the methods?
+17.  What is the difference between a static method and a non-static method?
+18.  Can you access a non-static variable from a static method? Why or why not?
+19.  What is a static block in Java, and when is it executed?
+20.  How can you call a static method in another class?
+21.  Can a static variable be overridden by a subclass? Why or why not?
+
