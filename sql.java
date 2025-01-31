@@ -19,3 +19,18 @@ Are you a Java Developer? Here are the most asked SQL & PLSQL interview question
 14.  What are query execution plans? Have you analyzed and optimized one in your projects? Explain the process.
 15.  Explain the difference between transaction control (e.g., COMMIT, ROLLBACK) and data control (e.g., GRANT, REVOKE) statements.
 hashtag#java hashtag#developer hashtag#Interview hashtag#questions hashtag#SQL hashtag#PLSQL hashtag#TRIGGERS 
+
+
+  Important SQL Task for Data Engineer/DATA Analyst JOB Roles:
+a.     Write a query to find all employees who joined after January 1, 2020.
+b.     Write a query to display employees with a salary greater than 50000.
+c.     Find employees with missing name or salary.
+d.     Replace NULL salaries with the average salary of their respective department.
+e.     Calculate the average salary for each department.
+f.      Count the number of employees in each department.
+g.     Assume another table called Department with dept_id and dept_name. Write a query to join the Employee table with the Department table.
+h.     Find the employee with the highest salary in each department using a subquery.
+i.       Write a query to display employees in descending order of their salaries.
+j.       Retrieve the top 2 highest-paid employees in the IT department.
+k.     Calculate the number of years each employee has worked in the company.
+l.       Find employees whose joining date is on a weekend.
