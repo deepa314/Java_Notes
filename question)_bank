@@ -201,6 +201,27 @@ hashtag#microservices hashtag#java hashtag#developer hashtag#interview hashtag#p
 
 
 
+.     Can you explain the importance of overriding the equals() and hashCode() methods?
+2.     If you want to ensure an object is garbage collected, how would you do it?
+3.     What are Collections in Java, and how is ArrayList different from LinkedList?
+4.     Which one would you prefer for frequent insertions and deletions, and why?
+5.     What is the purpose of functional interfaces in Java?
+6.     What is the difference between public, protected, private, and default access modifiers in Java?
+7.     Can a protected member be accessed outside of a package?
+8.     Can an abstract class implement an interface? If yes, how?
+9.     Write a small program to demonstrate the usage of both this and super.
+10.  Can a constructor be static?
+11.  What is the importance of equals() and hashCode() methods in HashMap?
+12.  Write a program to remove duplicate values from a List using a Set.
+13.  Explain the concept of finalize() method in Java.
+14.  Is it guaranteed to be called before garbage collection?
+15.  Should developers rely on it? Why or why not?
+16.  Explain the concept of try-with-resources in Java.
+17.  Write a program to read a file using try-with-resources and handle potential exceptions.
+18.  What are the common techniques to achieve thread safety in Java?
+
+
+
 
 Recently asked Java Developer Interview Questions
 hashtag#java hashtag#developer hashtag#interview hashtag#preparation
@@ -221,3 +242,29 @@ Can you write a simple example where you filter a list of numbers and find the s
 13.  What is Mockito used for, and how would you use it to mock a service in a Spring Boot application? Can you show an example where you mock an external service call in a unit test?
 14.  Can you explain Test-Driven Development (TDD)? How have you applied TDD in your Spring Boot projects, and what challenges did you face while writing tests before the implementation?
 
+
+Most asked Java interview questions
+1.    How does the Optional class help prevent NullPointerException?
+2.    Write a code snippet to safely fetch a value from a Map using Optional.
+3.    How does the java.time package differ from the old Date and Calendar APIs?
+4.    Write a program to calculate the difference in days between two dates.
+5.    What are default methods in interfaces?
+6.    Can you override a default method in an implementing class?
+7.    How does garbage collection work in Java?
+8.    What is the difference between System.gc() and the Garbage Collector running automatically?
+9.    What can cause memory leaks in Java, and how can you avoid them?
+10. Can you explain the structure of the JVM?
+11. What are the roles of the Heap and the Stack in memory management?
+12. What are the different ways to create threads in Java?
+13. What is the difference between start() and run() methods in the Thread class?
+14. How does the synchronized keyword work?
+15. What is the difference between synchronized methods and synchronized blocks?
+16. What is the advantage of using the Executors framework over manually creating threads?
+17. Can you explain the difference between FixedThreadPool and CachedThreadPool?
+18. What is a deadlock in Java? How can you detect and avoid it?
+19. Can you demonstrate a simple program that causes a deadlock?
+20. Write a program to sort a list of employees by their salary in descending order using both Comparator and Streams API.
+21. Write a method to check if a given string is a palindrome using recursion.
+22. Write a program to find duplicate elements in an array using a HashSet.
+23. Implement a thread-safe Singleton class using the Double-Check Locking principle.
+24. Write a Java program to solve the Producer-Consumer problem using wait() and notify().
