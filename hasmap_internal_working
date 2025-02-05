@@ -1,0 +1,107 @@
+
+Map Interface
+
+1.Load Factor
+2.In map Entry<k,v>Interface   -----> sub interface
+Why??????
+
+In hashmap it is Node<j,v>
+0
+1.hash:
+2.key:
+3.value:
+4.Next
+
+similarly       ------> will create new hash in case of index same
+1
+1.hash:1234567  
+2.key:1
+3.value:sj
+4.Next:--------------------------------->hash:423677884
+                                         key:10
+                                         value:kj
+                                         Next:null
+
+Similarly
+2
+1.hash:894789687
+2.key:5
+3.value:pj
+4.next:null
+
+Map<Integer,String> xyz=new HashMap<>(3)
+It have bydefault size of 16;
+
+How it will insert data?
+xyz.put(1,"sj");   ----> it will compute Hash(many hashing algorithms present) and give index=1234567%sizeOfTable(3)=1
+xyz.put(5,"pj");     ----> it will compute Hash(many hashing algorithms present) and give index=894789687%sizeOfTable(3)=2
+xyz.put(10,"kj");     ----> it will compute Hash(many hashing algorithms present) and give index=423677884%sizeOfTable(3)=1
+
+Same index comes,then hash will find same key present .You will check it is 10 not 1
+
+If there is lot of collision like index 1 ,then more such object will keep creating
+
+Let's say you are trying to get value form key
+xyz.get(5)
+
+1.First it will internally perform the hash , and it should generate the same key which is 894789687%3=2
+2.Now it will internally iterate in linkedlist to find the out a map
+
+Whenevr the get is trying to find hash of a particular key it will get same hashcode because there is contract between hashcode and equal ,hashcode is the method which helps to generate hash ,equals is method where we do comparison on get compare objects 
+Contract 1if object 1 and objec2 are same then there hash should also be same
+          2.if two object hash is same doesn't mean two objects are equal
+
+Always compare value and key both you cannot rely on hashcode it could be same for two objects
+
+re-hashing
+performance
+
+
+
+Time Complexity of hash Map
+How it is 0(1)?????  -----> For Insetion,deletion,Searching
+
+
+Average Time complexity :o(1)
+Worst Complexity:o(n) ---> In case linked list but after treefy threshhold(8) convert to red black tree(complexity --->o(logn)
+
+How does it maintain this average:
+Load Balancer----->0.75
+
+16*0.75=12
+Whenever 12 key value mapping is insert into table it will do rehash.It will increase or double the size
+
+When size of hashtable increaes there will be less collision because there is more space
+
+
+
+Worse Scenario
+
+Lets say we have enough size still there is collision and long linked list
+For that there is something called treefy threshhold(default value:8)
+
+
+0
+1.hash:
+2.key:
+3.value:   ->  obj2 --->0b3---->obj4--->obj5--->obj6-->obj7--->obj8-(It reached treefy threshhold After this point LinkedList Convert to Balance Bindary Tree (Red black Tree) Internally
+4.Next
+
+similarly       ------> will create new hash in case of index same
+1
+1.hash:1234567  
+2.key:1
+3.value:sj
+4.Next:--------------------------------->hash:423677884
+                                         key:10
+                                         value:kj
+    
+|
+|
+|
+|
+|
+Because it have provided treefythreshold 8 as soon as linkedlist go to 8 it will convert to 
+Now searching would be 0(logn)balanced binary search tree
+total 100  objects
+
