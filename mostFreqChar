@@ -1,0 +1,35 @@
+Add a program to Find the mostFrequent char from string using hashmap
+
+public static void main(String[] args) {
+		System.out.println("Hi");
+	    HashMap<Character,Integer> hm=new HashMap<>();
+		String s1="deepa";
+		for(int i=0;i<s1.length();i++){
+			Character ch=s1.charAt(i);
+			if(hm.containsKey(ch)){
+
+				int oldFreq=hm.get(ch);
+				int newFreq=oldFreq+1;
+
+				hm.put(ch,newFreq);
+			}
+			else{
+				hm.put(ch,1);
+			}
+		}
+		System.out.println(hm);
+
+		Character maxFreqChar= s1.charAt(0);
+		int maxFreq=hm.get(s1.charAt(0));
+				for(Character ch1:hm.keySet()){
+					if(hm.get(ch1)>maxFreq){
+						maxFreqChar=ch1;
+						maxFreq=hm.get(ch1);
+
+					}
+				}
+
+				System.out.println("character: "+maxFreqChar);
+				System.out.println("no: "+maxFreq);
+	
+	}
